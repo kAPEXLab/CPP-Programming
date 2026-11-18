@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title | escape }}</title>
+  <title>{{ page.title | default: site.title | escape }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <base target="question-content">
 </head>
@@ -13,7 +13,7 @@
       <img src="{{ '/assets/img/LOGO-APEX-Lab-KPIT-Jun25.png' | relative_url }}" alt="KPIT APEX Lab">
     </header>
     <header class="page-title">
-      <h1>C Programming Question Bank</h1>
+      <h1>C++ Programming Question Bank</h1>
     </header>
     <nav class="question-index" aria-label="Question index">
       {{ content | replace: '.md"', '.html"' }}
@@ -22,7 +22,7 @@
       <iframe
         name="question-content"
         title="Selected question"
-        src="{{ '/Question-Bank/01_Variables/01_motor_input_power_variables.html' | relative_url }}">
+        src="{{ '/CPPBasics-Question-Bank/01_vehicle_class_design_and_properties_scenerio.html' | relative_url }}">
       </iframe>
     </main>
   </div>

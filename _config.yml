@@ -1,10 +1,14 @@
-title: C Programming Question Bank
+title: C++ Programming Question Bank
 url: https://kapexlab.github.io
 baseurl: /C-Programming
 markdown: GFM
 
 defaults:
   - scope:
-      path: Question-Bank
+      path: CPPBasics-Question-Bank
+    values:
+      layout: default
+  - scope:
+      path: CPP11-14-Question-Bank
     values:
       layout: default

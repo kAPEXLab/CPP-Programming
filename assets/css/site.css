@@ -171,6 +171,60 @@ body {
   padding: 0;
 }
 
+.bank-tabs {
+  position: relative;
+}
+
+.bank-tabs > input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.bank-tabs > label {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  color: #0969da;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 4px 10px 0;
+  padding: 7px 9px;
+}
+
+.bank-tabs > label:hover {
+  background: #eef1f4;
+}
+
+.bank-tabs > input:focus-visible + label {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+#bank-basics:checked ~ label[for="bank-basics"] {
+  background: #0969da;
+  border-color: #0969da;
+  color: #fff;
+}
+
+#bank-cpp1114:checked ~ label[for="bank-cpp1114"] {
+  background: #0969da;
+  border-color: #0969da;
+  color: #fff;
+}
+
+.bank-panel {
+  display: none;
+}
+
+#bank-basics:checked ~ .bank-panel-basics,
+#bank-cpp1114:checked ~ .bank-panel-cpp1114 {
+  display: block;
+}
+
 @media (max-width: 700px) {
   .page-grid {
     grid-template-rows: 84px minmax(0, 1fr);
